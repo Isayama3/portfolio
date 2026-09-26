@@ -1,31 +1,32 @@
 {
   "name": "Ahmed Ismail",
   "fullName": "Ahmed Ismail Ahmed",
-  "brand": "Ahmed.Dev",
-  "role": "Backend Developer",
+  "brand": "Ahmed Ismail",
+  "role": "Software Engineer",
   "typedRoles": [
-    "Backend Architect",
-    "API Engineer",
-    "Laravel & Node Specialist",
-    "Systems Builder"
+    "Software Engineer",
+    "Backend Specialist",
+    "API & Systems Engineer",
+    "Platform Engineer"
   ],
-  "tagline": "Queue-driven systems, scalable APIs, and real-time backends for high-traffic products.",
+  "tagline": "Software engineer specialized in backend — scalable APIs, queues, and systems built for real traffic.",
   "location": "Dokki, Giza, Egypt",
   "availability": "Available for Projects",
   "cv": "/cv.pdf",
   "photo": "/images/profile.jpg",
   "phone": "+20 10 6643 6323",
-  "intro": "Expert in building scalable APIs, queue-driven workflows, and high-concurrency backends with PHP, Laravel, Node.js, Redis, and PostgreSQL.",
-  "about": "Backend Developer with 5+ years bridging reliable server architecture and product delivery. I ship complete, scalable backend systems tailored to travel, SaaS, marketplace, and mobile products.",
+  "intro": "Software engineer specialized in backend systems — APIs, data pipelines, integrations, and the infrastructure that keeps products fast and reliable.",
+  "aiNote": "I use AI tools day-to-day to enhance delivery speed and code quality.",
+  "about": "Software Engineer with 5+ years focused on backend architecture and product delivery. I design and ship server-side systems for travel, SaaS, marketplace, and mobile products — from APIs through production.",
   "aboutPillars": [
     {
       "title": "The Vision",
-      "body": "I don't just write endpoints — I build systems that stay up under traffic. Clear domains, documented spikes, and APIs clients can trust.",
+      "body": "I don't just write endpoints — I build backend systems that stay up under traffic. Clear domains, pragmatic designs, and APIs clients can trust.",
       "tags": ["Problem Solver", "Reliable", "Detail Oriented"]
     },
     {
       "title": "API Craft",
-      "body": "REST APIs tuned for React and Flutter, OpenAPI docs, modular supplier integrations, and multi-tenant product backends.",
+      "body": "REST APIs for web and mobile clients, OpenAPI docs, modular integrations, and multi-tenant product backends.",
       "tags": ["REST", "OpenAPI", "Multi-tenancy"]
     },
     {
@@ -64,7 +65,7 @@
   "services": [
     {
       "title": "Backend & API",
-      "body": "Robust server-side logic, database design, and secure API integration.",
+      "body": "Robust server-side logic, database design, and secure API integration for web and mobile products.",
       "points": ["RESTful APIs", "Database modeling", "Auth & security", "Cloud-ready Docker deploys"]
     },
     {
@@ -94,14 +95,11 @@
       "years": "Dec 2024 – Present",
       "note": "OTA travel platform — search, rates, content, booking flows, and third-party hotel integrations.",
       "bullets": [
-        "Led system design, ticket breakdown, and architectural decisions across backend, DevOps, and frontend squads to streamline sprint delivery while conducting rigorous code reviews to enforce SOLID principles and clean architecture standards.",
-        "Reduced hotel list and rate fetch loading times on the client side from 2 minutes down to 10 seconds by refactoring caching layers, optimizing database queries, and streamlining API payloads.",
-        "Transformed multi-supplier hotel data ingestion, room mapping, and Meilisearch indexing pipelines from hours to mere seconds by leveraging asynchronous worker pools and chunked streaming generators.",
-        "Engineered custom data transformation algorithms to map complex third-party room rates, occupancy rules, and real-time hotel availability into unified internal domain models.",
-        "Fine-tuned Meilisearch typo-tolerance settings and custom ranking rules to deliver instant, highly relevant geo-search results for hotel names and destinations with minimal query overhead.",
-        "Re-architected Laravel Horizon worker pools and resource limits, drastically lowering CPU/memory consumption during peak sync workloads, while optimizing Docker multi-stage builds to significantly decrease container build and deployment times.",
-        "Designed and built a flexible integration layer using Strategy and Factory design patterns with Dependency Injection (DI), allowing rapid onboarding of third-party supplier rates and hotel content APIs without rewriting core search or booking logic.",
-        "Designed and rolled out a versioned RESTful HTTP API (V1 → V2) with parallel controllers/services and OpenAPI/Swagger specs, ensuring new feature releases ship on V2 without regressing existing V1 clients."
+        "Led backend system design, ticket breakdown, and code reviews across squads — SOLID and clean architecture.",
+        "Cut hotel list and rate-fetch load time from ~2 minutes to ~10 seconds via caching, query, and API payload work.",
+        "Sped up multi-supplier ingest, room mapping, and Meilisearch indexing from hours to seconds with async workers and streaming generators.",
+        "Built a Strategy/Factory + DI integration layer for third-party hotel rates and content without rewriting core search/booking.",
+        "Shipped API V1 → V2 with parallel services and OpenAPI; tuned Horizon/Docker for lower peak CPU/memory and faster deploys."
       ],
       "tags": ["Laravel", "Horizon", "Redis", "Meilisearch", "Docker", "Hotel APIs"],
       "kind": "work"
@@ -181,7 +179,7 @@
       "meta": "Education",
       "title": "B.S. in CS & IT",
       "years": "2017 – 2021",
-      "note": "Computer science foundation — later focused into backend engineering, systems, and APIs.",
+      "note": "Computer science foundation — later focused into backend software engineering, systems, and APIs.",
       "tags": ["Problem Solving", "CS Fundamentals"],
       "kind": "education"
     }

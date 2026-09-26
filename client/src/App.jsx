@@ -50,7 +50,9 @@ function SiteHeader({ brand, locationLabel, links }) {
   const clock = useCairoClock();
   const github = realLink(links?.github);
   const linkedin = realLink(links?.linkedin);
-  const brandLeft = (brand || "Ahmed.Dev").split(".")[0];
+  const brandLabel = brand || "Ahmed Ismail";
+  const [brandMain, ...brandRest] = brandLabel.trim().split(/\s+/);
+  const brandAccent = brandRest.join(" ");
 
   useEffect(() => {
     setOpen(false);
@@ -112,8 +114,13 @@ function SiteHeader({ brand, locationLabel, links }) {
       <header className="site-header">
         <div className="site-header-inner">
           <Link to="/" className="brand" onClick={() => setOpen(false)}>
-            <span className="brand-first">{brandLeft}</span>
-            <span className="brand-script">.Dev</span>
+            <span className="brand-first">{brandMain}</span>
+            {brandAccent ? (
+              <>
+                {" "}
+                <span className="brand-script">{brandAccent}</span>
+              </>
+            ) : null}
           </Link>
 
           <nav className="nav-pill" aria-label="Primary">
@@ -173,41 +180,65 @@ function SiteHeader({ brand, locationLabel, links }) {
         aria-hidden={!open}
         aria-label="Site menu"
       >
-        <div className="nav-overlay-glow" aria-hidden="true" />
-        <nav className="nav-overlay-links" aria-label="Mobile">
-          {SECTIONS.map((s, i) => (
+        <div className="nav-sheet">
+          <div className="nav-sheet-top">
+            <Link to="/" className="brand" onClick={() => setOpen(false)}>
+              <span className="brand-first">{brandMain}</span>
+              {brandAccent ? (
+                <>
+                  {" "}
+                  <span className="brand-script">{brandAccent}</span>
+                </>
+              ) : null}
+            </Link>
             <button
-              key={s.id}
               type="button"
-              className="nav-link"
-              style={{ "--i": i }}
-              onClick={() => navTo(s.id)}
+              className="icon-btn nav-sheet-close"
+              aria-label="Close menu"
+              onClick={() => setOpen(false)}
             >
-              <span className="nav-index">0{i + 1}</span>
-              {s.label}
+              <span className="nav-close-x" aria-hidden="true" />
             </button>
-          ))}
-        </nav>
-        <div className="nav-overlay-social" style={{ "--i": SECTIONS.length }}>
-          {github && (
-            <a className="social" href={github} {...linkAttrs(github)} onClick={() => setOpen(false)}>
-              GH
-            </a>
-          )}
-          {linkedin && (
-            <a className="social" href={linkedin} {...linkAttrs(linkedin)} onClick={() => setOpen(false)}>
-              in
-            </a>
-          )}
-          <a
-            className="social"
-            href="/cv.pdf"
-            download="Ahmed-Ismail-CV.pdf"
-            onClick={() => setOpen(false)}
-            title="Download CV"
-          >
-            CV
-          </a>
+          </div>
+
+          <nav className="nav-overlay-links" aria-label="Mobile">
+            {SECTIONS.map((s, i) => (
+              <button
+                key={s.id}
+                type="button"
+                className={`nav-link${active === s.id ? " is-active" : ""}`}
+                style={{ "--i": i }}
+                onClick={() => navTo(s.id)}
+              >
+                {s.label}
+              </button>
+            ))}
+          </nav>
+
+          <div className="nav-sheet-foot" style={{ "--i": SECTIONS.length }}>
+            <div className="nav-overlay-social">
+              {github && (
+                <a className="social" href={github} {...linkAttrs(github)} onClick={() => setOpen(false)}>
+                  GH
+                </a>
+              )}
+              {linkedin && (
+                <a className="social" href={linkedin} {...linkAttrs(linkedin)} onClick={() => setOpen(false)}>
+                  in
+                </a>
+              )}
+              <a
+                className="social"
+                href="/cv.pdf"
+                download="Ahmed-Ismail-CV.pdf"
+                onClick={() => setOpen(false)}
+                title="Download CV"
+              >
+                CV
+              </a>
+            </div>
+            <p className="nav-sheet-tag">Backend-focused software engineer</p>
+          </div>
         </div>
       </div>
     </>
@@ -232,8 +263,15 @@ function SiteFooter({ profile }) {
     <footer className="site-footer">
       <div>
         <strong className="brand-name">
-          {(profile?.brand || "Ahmed.Dev").split(".")[0]}
-          <span className="brand-dot">.Dev</span>
+          {(profile?.brand || "Ahmed Ismail").split(/\s+/)[0]}
+          {((profile?.brand || "Ahmed Ismail").split(/\s+/).slice(1).join(" ") || "") && (
+            <>
+              {" "}
+              <span className="brand-dot">
+                {(profile?.brand || "Ahmed Ismail").split(/\s+/).slice(1).join(" ")}
+              </span>
+            </>
+          )}
         </strong>
         <p>{profile?.tagline}</p>
       </div>

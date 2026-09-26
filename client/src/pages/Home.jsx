@@ -71,7 +71,7 @@ function Stat({ value, suffix, label, active, style }) {
 
 function TypeLine({ phrases }) {
   const list = useMemo(
-    () => (phrases?.length ? phrases : ["Backend Developer"]),
+    () => (phrases?.length ? phrases : ["Software Engineer"]),
     [phrases]
   );
   const [index, setIndex] = useState(0);
@@ -164,7 +164,7 @@ function ContactForm() {
         <textarea
           name="message"
           rows={5}
-          placeholder="Tell me about the backend you need…"
+          placeholder="Tell me about the project or backend you need…"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           required
@@ -238,6 +238,7 @@ export default function Home({ profile }) {
           <Reveal delay={120}>
             <TypeLine phrases={profile.typedRoles} />
             <p className="hero-lead">{profile.intro}</p>
+            {profile.aiNote ? <p className="hero-note">{profile.aiNote}</p> : null}
           </Reveal>
           <Reveal delay={160} className="hero-stack">
             {["PHP", "Laravel", "Node.js", "Express", "Redis", "PostgreSQL", "Docker"].map((s) => (
@@ -524,7 +525,7 @@ export default function Home({ profile }) {
             Let&apos;s Build Something <span className="accent-text">Amazing</span>
           </h2>
           <p className="hero-lead center-lead">
-            Available for backend roles and contract work. If you have a product that needs a solid server side — or just want to say hi — inbox is open.
+            Available for software engineering roles with a backend focus, and contract work. If you need solid APIs and server-side systems — or just want to say hi — inbox is open.
           </p>
         </Reveal>
         <div className="contact-grid">
