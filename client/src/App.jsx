@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, Route, Routes, useLocation, useNavigate } from "react-router-dom";
-import { getProfile, linkAttrs, pingVisit, realLink } from "./api.js";
+import { getProfile, linkAttrs, realLink } from "./api.js";
 import Home from "./pages/Home.jsx";
 import Work from "./pages/Work.jsx";
 
@@ -340,13 +340,6 @@ export default function App() {
     getProfile()
       .then(setProfile)
       .catch((err) => setError(err.message));
-  }, []);
-
-  useEffect(() => {
-    const key = "visit-pinged";
-    if (sessionStorage.getItem(key)) return;
-    sessionStorage.setItem(key, "1");
-    pingVisit(window.location.pathname + window.location.hash);
   }, []);
 
   return (
