@@ -89,18 +89,21 @@
   "experience": [
     {
       "org": "Hojuzat — OTA Travel Platform",
-      "meta": "Hybrid · Hojuzat.com",
-      "title": "Backend Software Engineer",
+      "meta": "Full-time / Hybrid · Dokki, Egypt · Hojuzat.com",
+      "title": "Senior Backend Engineer",
       "years": "Dec 2024 – Present",
-      "note": "OTA hotel platform — search, content ingest, booking flows, and supplier integrations.",
+      "note": "OTA travel platform — search, rates, content, booking flows, and third-party hotel integrations.",
       "bullets": [
-        "Built core backend services for search, content ingest, booking-related flows, and third-party supplier integrations.",
-        "Modular integration layer (Strategy/Factory + DI) for third-party hotel rates and content providers.",
-        "Live availability and pricing via Laravel Reverb WebSockets, with short-polling fallback.",
-        "CSV streaming pipelines for large hotel/geography datasets; Horizon queues for third-party content sync.",
-        "Redis caching / materialized search, Meilisearch, and PostgreSQL GiST geo indexes; Docker + CI/CD deploys."
+        "Led system design, ticket breakdown, and architectural decisions across backend, DevOps, and frontend squads to streamline sprint delivery while conducting rigorous code reviews to enforce SOLID principles and clean architecture standards.",
+        "Reduced hotel list and rate fetch loading times on the client side from 2 minutes down to 10 seconds by refactoring caching layers, optimizing database queries, and streamlining API payloads.",
+        "Transformed multi-supplier hotel data ingestion, room mapping, and Meilisearch indexing pipelines from hours to mere seconds by leveraging asynchronous worker pools and chunked streaming generators.",
+        "Engineered custom data transformation algorithms to map complex third-party room rates, occupancy rules, and real-time hotel availability into unified internal domain models.",
+        "Fine-tuned Meilisearch typo-tolerance settings and custom ranking rules to deliver instant, highly relevant geo-search results for hotel names and destinations with minimal query overhead.",
+        "Re-architected Laravel Horizon worker pools and resource limits, drastically lowering CPU/memory consumption during peak sync workloads, while optimizing Docker multi-stage builds to significantly decrease container build and deployment times.",
+        "Designed and built a flexible integration layer using Strategy and Factory design patterns with Dependency Injection (DI), allowing rapid onboarding of third-party supplier rates and hotel content APIs without rewriting core search or booking logic.",
+        "Designed and rolled out a versioned RESTful HTTP API (V1 → V2) with parallel controllers/services and OpenAPI/Swagger specs, ensuring new feature releases ship on V2 without regressing existing V1 clients."
       ],
-      "tags": ["Laravel", "Reverb", "Horizon", "Redis", "Meilisearch", "Hotel APIs"],
+      "tags": ["Laravel", "Horizon", "Redis", "Meilisearch", "Docker", "Hotel APIs"],
       "kind": "work"
     },
     {
