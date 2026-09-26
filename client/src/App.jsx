@@ -22,21 +22,6 @@ const PILL_LINKS = [
   { id: "experience", label: "Experience" },
 ];
 
-function useTheme() {
-  const [theme, setTheme] = useState(() => {
-    const saved = localStorage.getItem("theme");
-    if (saved === "light" || saved === "dark") return saved;
-    return window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
-  });
-
-  useEffect(() => {
-    document.documentElement.setAttribute("data-theme", theme);
-    localStorage.setItem("theme", theme);
-  }, [theme]);
-
-  return [theme, () => setTheme((t) => (t === "dark" ? "light" : "dark"))];
-}
-
 function useCairoClock() {
   const [time, setTime] = useState(() => formatCairoTime());
   useEffect(() => {
@@ -57,36 +42,7 @@ function formatCairoTime() {
   }).format(new Date());
 }
 
-function ThemeIcon({ theme }) {
-  if (theme === "dark") {
-    return (
-      <svg className="theme-ico" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
-        <path
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.8"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M21 14.5A8.5 8.5 0 0 1 9.5 3 7 7 0 1 0 21 14.5Z"
-        />
-      </svg>
-    );
-  }
-  return (
-    <svg className="theme-ico" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
-      <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" strokeWidth="1.8" />
-      <path
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.8"
-        strokeLinecap="round"
-        d="M12 2v2.2M12 19.8V22M4.2 4.2l1.6 1.6M18.2 18.2l1.6 1.6M2 12h2.2M19.8 12H22M4.2 19.8l1.6-1.6M18.2 5.8l1.6-1.6"
-      />
-    </svg>
-  );
-}
-
-function SiteHeader({ brand, locationLabel, theme, onToggleTheme, links }) {
+function SiteHeader({ brand, locationLabel, links }) {
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState("top");
   const location = useLocation();
@@ -184,15 +140,6 @@ function SiteHeader({ brand, locationLabel, theme, onToggleTheme, links }) {
               </svg>
             </a>
             <span className="nav-pill-sep" aria-hidden="true" />
-            <button
-              type="button"
-              className="nav-theme"
-              onClick={onToggleTheme}
-              aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
-              title={theme === "dark" ? "Light mode" : "Dark mode"}
-            >
-              <ThemeIcon theme={theme} />
-            </button>
             <button type="button" className="nav-contact" onClick={() => navTo("contact")}>
               Contact
             </button>
@@ -204,14 +151,6 @@ function SiteHeader({ brand, locationLabel, theme, onToggleTheme, links }) {
           </div>
 
           <div className="header-actions">
-            <button
-              type="button"
-              className="icon-btn theme-toggle"
-              onClick={onToggleTheme}
-              aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
-            >
-              <ThemeIcon theme={theme} />
-            </button>
             <button
               type="button"
               className={`icon-btn nav-toggle${open ? " is-open" : ""}`}
@@ -334,7 +273,11 @@ function SiteFooter({ profile }) {
 export default function App() {
   const [profile, setProfile] = useState(null);
   const [error, setError] = useState(null);
-  const [theme, toggleTheme] = useTheme();
+
+  useEffect(() => {
+    localStorage.removeItem("theme");
+    document.documentElement.removeAttribute("data-theme");
+  }, []);
 
   useEffect(() => {
     getProfile()
@@ -349,8 +292,6 @@ export default function App() {
         brand={profile?.brand}
         locationLabel={profile?.location?.includes("Egypt") ? "Giza, Egypt" : profile?.location}
         links={profile?.links}
-        theme={theme}
-        onToggleTheme={toggleTheme}
       />
       {error ? (
         <p className="status error" role="alert">

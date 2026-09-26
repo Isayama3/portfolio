@@ -4,8 +4,7 @@
 @import "@fontsource/poppins/700.css";
 @import "@fontsource/poppins/800.css";
 
-:root,
-[data-theme="dark"] {
+:root {
   --bg: #0a0a0a;
   --bg-elevated: #141414;
   --surface: #1a1a1a;
@@ -27,23 +26,6 @@
   --font: "Poppins", "Segoe UI", sans-serif;
 }
 
-[data-theme="light"] {
-  --bg: #f7f4ec;
-  --bg-elevated: #ffffff;
-  --surface: #efeae0;
-  --line: rgba(180, 130, 0, 0.35);
-  --ink: #151515;
-  --muted: #5c5c5c;
-  --accent: #c49200;
-  --accent-ink: #ffffff;
-  --danger: #dc2626;
-  --ok: #15803d;
-  --header-bg: rgba(247, 244, 236, 0.9);
-  --overlay-bg: rgba(247, 244, 236, 0.94);
-  --card-border: rgba(0, 0, 0, 0.08);
-  --icon-border: rgba(0, 0, 0, 0.12);
-}
-
 *,
 *::before,
 *::after {
@@ -56,14 +38,6 @@ html {
   scroll-padding-top: calc(var(--header-h) + 0.75rem);
 }
 
-[data-theme="light"] {
-  color-scheme: light;
-}
-
-html[data-theme="light"] {
-  color-scheme: light;
-}
-
 body {
   margin: 0;
   min-height: 100vh;
@@ -73,9 +47,6 @@ body {
   font-size: 1rem;
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
-  transition:
-    background 280ms ease,
-    color 280ms ease;
 }
 
 body.nav-locked {
@@ -270,32 +241,6 @@ main,
   background: color-mix(in srgb, var(--ink) 14%, transparent);
 }
 
-.nav-theme {
-  width: 2.15rem;
-  height: 2.15rem;
-  display: grid;
-  place-items: center;
-  border-radius: 999px;
-  border: 1px solid var(--icon-border);
-  background: color-mix(in srgb, var(--ink) 8%, transparent);
-  color: var(--ink);
-  cursor: pointer;
-  margin-right: 0.2rem;
-  transition:
-    background 180ms ease,
-    transform 180ms ease,
-    border-color 180ms ease;
-}
-
-.nav-theme:hover {
-  background: color-mix(in srgb, var(--ink) 14%, transparent);
-  transform: scale(1.05);
-}
-
-.theme-ico {
-  display: block;
-}
-
 .nav-contact {
   appearance: none;
   border: 0;
@@ -315,11 +260,6 @@ main,
 .nav-contact:hover {
   transform: translateY(-1px);
   filter: brightness(1.05);
-}
-
-[data-theme="light"] .nav-contact {
-  background: var(--accent);
-  color: var(--accent-ink);
 }
 
 .header-meta {
@@ -373,10 +313,6 @@ main,
   color: var(--accent);
   transform: translateY(-1px) scale(1.04);
   box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 15%, transparent);
-}
-
-.theme-toggle {
-  font-size: 1rem;
 }
 
 .burger,
@@ -1927,9 +1863,7 @@ a:focus-visible,
 }
 
 @media (max-width: 960px) {
-  :root,
-  [data-theme="dark"],
-  [data-theme="light"] {
+  :root {
     --pad: 1.15rem;
     --header-h: 4rem;
   }
