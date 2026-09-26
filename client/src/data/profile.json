@@ -1,0 +1,210 @@
+{
+  "name": "Ahmed Ismail",
+  "fullName": "Ahmed Ismail Ahmed",
+  "brand": "Ahmed.Dev",
+  "role": "Backend Developer",
+  "typedRoles": [
+    "Backend Architect",
+    "API Engineer",
+    "Laravel & Node Specialist",
+    "Systems Builder"
+  ],
+  "tagline": "Queue-driven systems, scalable APIs, and real-time backends for high-traffic products.",
+  "location": "Dokki, Giza, Egypt",
+  "availability": "Available for Projects",
+  "cv": "/cv.pdf",
+  "photo": "/images/profile.jpg",
+  "phone": "+20 10 6643 6323",
+  "intro": "Expert in building scalable APIs, queue-driven workflows, and high-concurrency backends with PHP, Laravel, Node.js, Redis, and PostgreSQL.",
+  "about": "Backend Developer with 5+ years bridging reliable server architecture and product delivery. I ship complete, scalable backend systems tailored to travel, SaaS, marketplace, and mobile products.",
+  "aboutPillars": [
+    {
+      "title": "The Vision",
+      "body": "I don't just write endpoints — I build systems that stay up under traffic. Clear domains, documented spikes, and APIs clients can trust.",
+      "tags": ["Problem Solver", "Reliable", "Detail Oriented"]
+    },
+    {
+      "title": "API Craft",
+      "body": "REST APIs tuned for React and Flutter, OpenAPI docs, modular supplier integrations, and multi-tenant product backends.",
+      "tags": ["REST", "OpenAPI", "Multi-tenancy"]
+    },
+    {
+      "title": "Backend Architecture",
+      "body": "Queues, WebSockets, Redis caching, streaming pipelines, Docker, and CI/CD — the layer that makes high-traffic products feel instant.",
+      "tags": ["Laravel", "Redis", "PostgreSQL", "WebSockets"]
+    }
+  ],
+  "links": {
+    "email": "ahmed.ismail11199@gmail.com",
+    "github": "https://github.com/isayama3",
+    "linkedin": "https://linkedin.com/in/isayama3",
+    "website": ""
+  },
+  "stats": [
+    { "value": 5, "suffix": "+", "label": "Experience" },
+    { "value": 12, "suffix": "+", "label": "Projects" },
+    { "value": 6, "suffix": "+", "label": "Integrations" }
+  ],
+  "techStack": [
+    { "name": "PHP", "icon": "php" },
+    { "name": "Laravel", "icon": "laravel" },
+    { "name": "Node.js", "icon": "nodedotjs" },
+    { "name": "Express", "icon": "express" },
+    { "name": "PostgreSQL", "icon": "postgresql" },
+    { "name": "Redis", "icon": "redis" },
+    { "name": "MySQL", "icon": "mysql" },
+    { "name": "MongoDB", "icon": "mongodb" },
+    { "name": "Meilisearch", "icon": "meilisearch" },
+    { "name": "Elasticsearch", "icon": "elasticsearch" },
+    { "name": "WebSockets", "icon": "" },
+    { "name": "Docker", "icon": "docker" },
+    { "name": "Git", "icon": "git" },
+    { "name": "TypeScript", "icon": "typescript" }
+  ],
+  "services": [
+    {
+      "title": "Backend & API",
+      "body": "Robust server-side logic, database design, and secure API integration.",
+      "points": ["RESTful APIs", "Database modeling", "Auth & security", "Cloud-ready Docker deploys"]
+    },
+    {
+      "title": "Queues & Realtime",
+      "body": "Job workers, WebSockets, and data pipelines for products that update live.",
+      "points": ["Horizon / queues", "Live pricing & presence", "Streaming ingest", "Scheduled supplier sync"]
+    },
+    {
+      "title": "Product backends",
+      "body": "Multi-tenant SaaS and commerce backends from architecture to production.",
+      "points": ["Multi-tenancy", "Order workflows", "Admin (Filament)", "Marketplace flows"]
+    },
+    {
+      "title": "Integrations",
+      "body": "Payment gateways and travel-supplier APIs — checkout, hotel mapping, search, rates, and booking flows.",
+      "points": [
+        "Payments: Stripe, PayTabs, PayFort, Paymob",
+        "Travel: Expedia, Vervotech, ZentrumHub"
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "org": "Hojuzat — OTA Travel Platform",
+      "meta": "Hybrid · Hojuzat.com",
+      "title": "Backend Software Engineer",
+      "years": "Dec 2024 – Present",
+      "note": "OTA hotel platform — search, content ingest, booking flows, and supplier integrations.",
+      "bullets": [
+        "Built core backend services for search, content ingest, booking-related flows, and third-party supplier integrations.",
+        "Modular integration layer (Strategy/Factory + DI) for hotel suppliers — ZentrumHub, Expedia, and Vervotech mapping/content.",
+        "Live availability and pricing via Laravel Reverb WebSockets, with short-polling fallback.",
+        "CSV streaming pipelines for large hotel/geography datasets; Horizon queues for third-party content sync.",
+        "Redis caching / materialized search, Meilisearch, and PostgreSQL GiST geo indexes; Docker + CI/CD deploys."
+      ],
+      "tags": ["Laravel", "Reverb", "Horizon", "Redis", "Meilisearch", "ZentrumHub", "Expedia", "Vervotech"],
+      "kind": "work"
+    },
+    {
+      "org": "Taj",
+      "meta": "Full-time / On-site · Dokki, Egypt",
+      "title": "Backend Software Engineer",
+      "years": "Apr 2024 – Dec 2024",
+      "note": "Biz Buradayız & Taj ride-sharing — matching, booking, and realtime location.",
+      "bullets": [
+        "Biz Buradayız (Google Play) & Taj Ride-Sharing: ride-sharing backend workflows for dynamic user matching and real-time location communication.",
+        "Core Ride-Sharing Engine: RESTful APIs for real-time driver tracking, ride creation, booking workflows, and shared-ride approval.",
+        "Real-Time Communications: location streaming and push notification pipelines for booking status and ride approvals."
+      ],
+      "tags": ["Laravel", "APIs", "Realtime", "Push", "Biz Buradayız"],
+      "kind": "work"
+    },
+    {
+      "org": "ZR3i.COM",
+      "meta": "Part-time / Remote · Egypt",
+      "title": "Backend Software Engineer",
+      "years": "Mar 2024 – Jun 2024",
+      "note": "AgTech and precision agriculture SaaS — land analytics via satellite and GIS.",
+      "bullets": [
+        "AgTech and precision agriculture SaaS platform delivering land analytics via satellite and GIS integrations.",
+        "Multi-Tenant Architecture: resolved critical architectural and database issues in the multi-tenant core for web and mobile clients.",
+        "GIS Integration: third-party GIS APIs for automated land analysis and precision agricultural data."
+      ],
+      "tags": ["Laravel", "Multi-tenancy", "GIS"],
+      "kind": "work"
+    },
+    {
+      "org": "MMB Technology",
+      "meta": "Full-time / On-site · Maadi, Egypt",
+      "title": "Backend Software Engineer",
+      "years": "Oct 2023 – Apr 2024",
+      "note": "Automotive marketplace platform — digital car sales and auto-market apps.",
+      "bullets": [
+        "Automotive marketplace platform specializing in digital car sales and auto-market applications.",
+        "CarSpot Automotive App (Google Play): backend RESTful services, database schemas, car search filters, and vehicle listing modules."
+      ],
+      "tags": ["Laravel", "APIs", "Marketplace", "CarSpot"],
+      "kind": "work"
+    },
+    {
+      "org": "Contract Projects",
+      "meta": "Contract · Jun 2023 – Oct 2023",
+      "title": "Backend Software Engineer",
+      "years": "Jun 2023 – Oct 2023",
+      "note": "Cardnet (7lsoft), Golden Host (Creative Minds), e-Fatorah & iPluto.",
+      "bullets": [
+        "Cardnet (Google Play, via 7lsoft): multi-tenant backend refactor and compliant e-invoicing / payment processing.",
+        "Golden Host (Google Play, via Creative Minds): backend booking for real-estate hosting and chunked video upload for low-bandwidth.",
+        "e-Fatorah & iPluto: custom API modules, SaaS subscription integrations, and multi-tenant fixes across travel and LMS platforms."
+      ],
+      "tags": ["Laravel", "Cardnet", "Golden Host", "E-invoicing", "LMS"],
+      "kind": "work"
+    },
+    {
+      "org": "Nullisues International — Software House",
+      "meta": "Hybrid",
+      "title": "Backend Software Engineer",
+      "years": "Oct 2021 – Jun 2023",
+      "note": "Led backend for Jiovaniaff SaaS v2 and e-commerce apps.",
+      "bullets": [
+        "Led backend for Jiovaniaff SaaS v2 (affiliate) and e-commerce apps (Kayan, Jiovaniaff v1, Egygomla).",
+        "Built multi-tenant Laravel apps (custom HMVC) with Redis caching/queues, Docker, and Laravel Octane.",
+        "Optimized APIs for React/Flutter with raw SQL over Eloquent; State pattern for order workflows.",
+        "Added real-time features with Ratchet WebSockets on PostgreSQL."
+      ],
+      "tags": ["Laravel", "Octane", "Redis", "Multi-tenant", "WebSockets"],
+      "kind": "work"
+    },
+    {
+      "org": "Mansoura University",
+      "meta": "Education",
+      "title": "B.S. in CS & IT",
+      "years": "2017 – 2021",
+      "note": "Computer science foundation — later focused into backend engineering, systems, and APIs.",
+      "tags": ["Problem Solving", "CS Fundamentals"],
+      "kind": "education"
+    }
+  ],
+  "credentials": [
+    {
+      "title": "ITI Back-End Course",
+      "org": "ITI",
+      "years": "",
+      "body": "Backend-focused training covering server-side architecture and delivery practices.",
+      "tags": ["Backend", "APIs", "PHP"]
+    },
+    {
+      "title": "Backend Internship",
+      "org": "Ibda3.tech",
+      "years": "",
+      "body": "Hands-on backend internship building real features in a product team environment.",
+      "tags": ["Laravel", "Team Delivery"]
+    },
+    {
+      "title": "B.S. in CS & IT",
+      "org": "Mansoura University",
+      "years": "2017 – 2021",
+      "body": "Degree in Computer Science & Information Technology.",
+      "tags": ["Algorithms", "Databases", "Software"]
+    }
+  ],
+  "languages": ["Arabic", "English — B2"]
+}

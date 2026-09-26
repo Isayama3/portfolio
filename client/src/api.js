@@ -1,5 +1,5 @@
-import profile from "@data/profile.json";
-import projects from "@data/projects.json";
+import profile from "./data/profile.json";
+import projects from "./data/projects.json";
 
 export async function getProfile() {
   return profile;

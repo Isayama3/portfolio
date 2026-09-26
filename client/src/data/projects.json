@@ -1,0 +1,132 @@
+[
+  {
+    "slug": "hojuzat",
+    "title": "Hojuzat — Web & Mobile",
+    "year": "2024–Present",
+    "category": "Backend API",
+    "company": "Hojuzat",
+    "image": "/projects/hojuzat-mobile.png",
+    "summary": "OTA travel platform backends powering the Hojuzat website and mobile app — search, booking, and supplier pricing.",
+    "description": "Hojuzat is an OTA travel & tourism product (website + Android app on Google Play). As a backend engineer on the team, I worked on the server side of search, content ingest, booking-related flows, and third-party supplier integrations that power live availability and pricing for web and mobile clients.",
+    "technical": "Designed a modular integration layer (Strategy/Factory + DI) so hotel suppliers and external APIs can be added without rewriting core search/booking logic — including ZentrumHub (multi-supplier hotel API), Expedia lodging inventory/booking, and Vervotech hotel/room mapping & canonical content.\n\nLive availability and pricing ship via Laravel Reverb WebSockets, with short-polling fallback. Large hotel/geography datasets move through CSV streaming pipelines (generators + chunking). Horizon queues and scheduled jobs keep third-party content in sync. Redis caches materialized search data; PostgreSQL GiST indexes power geo queries. Docker and CI/CD support consistent deploys. APIs are consumed by the web product and the Hojuzat mobile app.",
+    "stack": [
+      "Laravel",
+      "Reverb",
+      "Horizon",
+      "Redis",
+      "PostgreSQL",
+      "Docker",
+      "Meilisearch",
+      "ZentrumHub",
+      "Expedia",
+      "Vervotech"
+    ],
+    "links": {
+      "live": "https://hojuzat.com",
+      "play": "https://play.google.com/store/apps/details?id=com.hojuzat.offers&hl=en",
+      "repo": ""
+    }
+  },
+  {
+    "slug": "carspot",
+    "title": "CarSpot",
+    "year": "2023–2024",
+    "category": "Backend API",
+    "company": "MMB Technology",
+    "image": "/projects/car-spot-mobile.png",
+    "summary": "Automotive marketplace backend at MMB — cars, trucks, plates, parts, rentals, and services on Google Play.",
+    "description": "CarSpot is a mobile automotive marketplace on Google Play for buying/selling cars and trucks, premium numbers, license plates, spare parts, rentals, and car services. I contributed backend APIs for marketplace flows while at MMB Technology — product and brand belong to the client; this entry reflects my role on the team.",
+    "technical": "Laravel RESTful APIs, schemas, and inventory-oriented modules powering the CarSpot mobile clients — listings, categories, and buyer/seller communication paths.",
+    "stack": ["Laravel", "APIs", "Marketplace", "Mobile"],
+    "links": {
+      "live": "",
+      "play": "https://play.google.com/store/apps/details?id=com.application.carspot&hl=en",
+      "repo": ""
+    }
+  },
+  {
+    "slug": "biz-buradayiz",
+    "title": "Biz Buradayız",
+    "year": "2024",
+    "category": "Backend API",
+    "company": "Taj",
+    "image": "/projects/biz-buradayiz-mobile.png",
+    "summary": "Roadside-assistance APIs at Taj — matching customers with towing, battery, tire, and service providers.",
+    "description": "Biz Buradayız (“We Are Here”) is a roadside-assistance marketplace on Google Play that connects customers with towing, battery, tire, and related service providers. Backend work was delivered while at Taj — product and brand belong to Biz Buradayız; this entry reflects my API contribution, not sole ownership.",
+    "technical": "Laravel APIs for service requests, provider matching, status updates, and mobile-oriented realtime/push hooks used by the customer app.",
+    "stack": ["Laravel", "APIs", "Push", "Realtime", "Mobile"],
+    "links": {
+      "live": "",
+      "play": "https://play.google.com/store/apps/details?id=com.namaait.bizburadayiz&hl=en",
+      "repo": ""
+    }
+  },
+  {
+    "slug": "zr3i",
+    "title": "Zr3i — GIS land analytics",
+    "year": "2023–2024",
+    "category": "Backend API",
+    "company": "Zr3i",
+    "image": "/projects/zr3i.png",
+    "summary": "Multi-tenant fixes and GIS land-analytics integration for Zr3i.com.",
+    "description": "Zr3i is a land-analytics product. I contributed backend work around multi-tenant behavior and GIS-related integrations on Zr3i.com.",
+    "technical": "Supported multi-tenant fixes and GIS land-analytics integration across tenancy boundaries on a Laravel backend.",
+    "stack": ["Laravel", "GIS", "Multi-tenancy"],
+    "links": {
+      "live": "https://zr3i.com",
+      "play": "",
+      "repo": ""
+    }
+  },
+  {
+    "slug": "creative-minds",
+    "title": "Golden Host",
+    "year": "2023–2024",
+    "category": "Backend API",
+    "company": "Creative Minds",
+    "image": "/projects/golden-host-mobile.png",
+    "summary": "Backend for Golden Host (web + mobile) while at Creative Minds — Saudi short-stay / property booking.",
+    "description": "Golden Host is a Saudi short-stay platform for apartments, chalets, villas, and more (website + Google Play app). I contributed as a backend team member at Creative Minds — product and brand belong to the company; this entry reflects my role on the team, not sole ownership.",
+    "technical": "Server-side features supporting booking / real-estate flows for web and mobile clients, plus related LMS chunked video upload work in the same engagement. Laravel APIs oriented for the product’s clients and operators.",
+    "stack": ["Laravel", "APIs", "LMS", "Chunked upload", "Mobile"],
+    "links": {
+      "live": "https://goldenhost.co/",
+      "play": "https://play.google.com/store/apps/details?id=com.cemsit.golden_host&hl=en",
+      "repo": ""
+    }
+  },
+  {
+    "slug": "cardnet",
+    "title": "Cardnet",
+    "year": "2023–2024",
+    "category": "Backend API",
+    "company": "7lsoft (Contract)",
+    "image": "/projects/cardnet.png",
+    "summary": "E-commerce backend for Cardnet (via 7lsoft, contract) — digital cards, electronics, and e-invoicing.",
+    "description": "Cardnet is a shopping app on Google Play for digital cards and electronics. Backend work — multi-tenant refactor and e-invoicing / payment processing — was delivered on contract via 7lsoft. Product and brand belong to the merchant; this entry reflects my contribution as a contractor.",
+    "technical": "Laravel multi-tenant commerce services for listings, checkout-related flows, compliant e-invoicing hooks, and mobile API contracts consumed by the Cardnet Android app.",
+    "stack": ["Laravel", "E-commerce", "E-invoicing", "APIs", "Mobile"],
+    "links": {
+      "live": "",
+      "play": "https://play.google.com/store/apps/details?id=sa.hl.cardnet&hl=en",
+      "repo": ""
+    }
+  },
+  {
+    "slug": "jiovaniaff",
+    "title": "Jiovaniaff SaaS & commerce",
+    "year": "2021–2023",
+    "category": "Backend API",
+    "company": "Nullisues International",
+    "image": "/projects/jiovaniaff.png",
+    "summary": "Affiliate SaaS v2 and e-commerce apps (Kayan, Jiovaniaff v1, Egygomla) at Nullisues.",
+    "description": "At Nullisues International I led backend work for Jiovaniaff SaaS v2 (affiliate) and e-commerce apps including Kayan, Jiovaniaff v1, and Egygomla.",
+    "technical": "Multi-tenant Laravel (custom HMVC) with Redis caching/queues, Docker, and Laravel Octane. Optimized APIs for React/Flutter with raw SQL over Eloquent; State pattern for order workflows. Real-time features via Ratchet WebSockets on PostgreSQL.",
+    "stack": ["Laravel", "Octane", "Redis", "PostgreSQL", "WebSockets"],
+    "links": {
+      "live": "",
+      "play": "",
+      "repo": ""
+    }
+  }
+]

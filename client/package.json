@@ -3,8 +3,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
+    "sync-data": "test -f ../data/profile.json && cp ../data/profile.json ../data/projects.json src/data/ || true",
+    "dev": "npm run sync-data && vite",
+    "build": "npm run sync-data && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
