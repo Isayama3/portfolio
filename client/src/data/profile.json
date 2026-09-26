@@ -82,7 +82,7 @@
       "body": "Payment gateways and travel-supplier APIs — checkout, hotel mapping, search, rates, and booking flows.",
       "points": [
         "Payments: Stripe, PayTabs, PayFort, Paymob",
-        "Travel: Expedia, Vervotech, ZentrumHub"
+        "Travel: third-party hotel rates and content providers"
       ]
     }
   ],
@@ -95,12 +95,12 @@
       "note": "OTA hotel platform — search, content ingest, booking flows, and supplier integrations.",
       "bullets": [
         "Built core backend services for search, content ingest, booking-related flows, and third-party supplier integrations.",
-        "Modular integration layer (Strategy/Factory + DI) for hotel suppliers — ZentrumHub, Expedia, and Vervotech mapping/content.",
+        "Modular integration layer (Strategy/Factory + DI) for third-party hotel rates and content providers.",
         "Live availability and pricing via Laravel Reverb WebSockets, with short-polling fallback.",
         "CSV streaming pipelines for large hotel/geography datasets; Horizon queues for third-party content sync.",
         "Redis caching / materialized search, Meilisearch, and PostgreSQL GiST geo indexes; Docker + CI/CD deploys."
       ],
-      "tags": ["Laravel", "Reverb", "Horizon", "Redis", "Meilisearch", "ZentrumHub", "Expedia", "Vervotech"],
+      "tags": ["Laravel", "Reverb", "Horizon", "Redis", "Meilisearch", "Hotel APIs"],
       "kind": "work"
     },
     {

@@ -8,7 +8,7 @@
     "image": "/projects/hojuzat-mobile.png",
     "summary": "OTA travel platform backends powering the Hojuzat website and mobile app — search, booking, and supplier pricing.",
     "description": "Hojuzat is an OTA travel & tourism product (website + Android app on Google Play). As a backend engineer on the team, I worked on the server side of search, content ingest, booking-related flows, and third-party supplier integrations that power live availability and pricing for web and mobile clients.",
-    "technical": "Designed a modular integration layer (Strategy/Factory + DI) so hotel suppliers and external APIs can be added without rewriting core search/booking logic — including ZentrumHub (multi-supplier hotel API), Expedia lodging inventory/booking, and Vervotech hotel/room mapping & canonical content.\n\nLive availability and pricing ship via Laravel Reverb WebSockets, with short-polling fallback. Large hotel/geography datasets move through CSV streaming pipelines (generators + chunking). Horizon queues and scheduled jobs keep third-party content in sync. Redis caches materialized search data; PostgreSQL GiST indexes power geo queries. Docker and CI/CD support consistent deploys. APIs are consumed by the web product and the Hojuzat mobile app.",
+    "technical": "Designed a modular integration layer (Strategy/Factory + DI) so third-party hotel rates and content providers can be added without rewriting core search/booking logic — covering supplier inventory, booking, hotel/room mapping, and canonical content.\n\nLive availability and pricing ship via Laravel Reverb WebSockets, with short-polling fallback. Large hotel/geography datasets move through CSV streaming pipelines (generators + chunking). Horizon queues and scheduled jobs keep third-party content in sync. Redis caches materialized search data; PostgreSQL GiST indexes power geo queries. Docker and CI/CD support consistent deploys. APIs are consumed by the web product and the Hojuzat mobile app.",
     "stack": [
       "Laravel",
       "Reverb",
@@ -17,9 +17,7 @@
       "PostgreSQL",
       "Docker",
       "Meilisearch",
-      "ZentrumHub",
-      "Expedia",
-      "Vervotech"
+      "Hotel APIs"
     ],
     "links": {
       "live": "https://hojuzat.com",
