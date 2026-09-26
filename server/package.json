@@ -1,0 +1,14 @@
+{
+  "name": "server",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch index.js",
+    "start": "NODE_ENV=production node index.js"
+  },
+  "dependencies": {
+    "dotenv": "^18.0.4",
+    "express": "^4.21.2",
+    "nodemailer": "^10.0.10"
+  }
+}
