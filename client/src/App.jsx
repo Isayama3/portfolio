@@ -4,6 +4,14 @@ import { getProfile, linkAttrs, realLink } from "./api.js";
 import Home from "./pages/Home.jsx";
 import Work from "./pages/Work.jsx";
 
+function WhatsAppIcon({ size = 14 }) {
+  return (
+    <svg viewBox="0 0 24 24" width={size} height={size} aria-hidden="true" fill="currentColor">
+      <path d="M12.04 2C6.58 2 2.15 6.4 2.15 11.84c0 1.99.58 3.84 1.6 5.42L2 22l4.9-1.7a9.86 9.86 0 0 0 5.14 1.42h.01c5.46 0 9.89-4.4 9.89-9.84C21.94 6.4 17.5 2 12.04 2Zm5.77 14.01c-.24.67-1.4 1.23-1.94 1.3-.5.07-1.13.1-1.82-.11-.42-.13-.96-.31-1.65-.61-2.9-1.26-4.79-4.18-4.93-4.37-.14-.19-1.17-1.56-1.17-2.97 0-1.41.74-2.1 1-2.39.26-.29.57-.36.76-.36h.55c.18 0 .41-.07.64.49.24.58.82 2 .89 2.14.07.15.12.32.02.51-.1.2-.15.32-.3.49-.14.17-.3.38-.43.51-.14.14-.29.29-.12.56.16.28.73 1.2 1.56 1.94 1.08.96 1.98 1.26 2.26 1.4.28.14.44.12.6-.07.17-.2.7-.81.89-1.09.19-.28.37-.23.63-.14.26.1 1.65.78 1.93.92.28.14.47.21.54.33.07.12.07.68-.17 1.35Z" />
+    </svg>
+  );
+}
+
 const SECTIONS = [
   { id: "top", label: "Home" },
   { id: "about", label: "About" },
@@ -42,7 +50,7 @@ function formatCairoTime() {
   }).format(new Date());
 }
 
-function SiteHeader({ brand, locationLabel, links }) {
+function SiteHeader({ brand, links }) {
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState("top");
   const location = useLocation();
@@ -50,6 +58,7 @@ function SiteHeader({ brand, locationLabel, links }) {
   const clock = useCairoClock();
   const github = realLink(links?.github);
   const linkedin = realLink(links?.linkedin);
+  const whatsapp = realLink(links?.whatsapp);
   const brandLabel = brand || "Ahmed Ismail";
   const [brandMain, ...brandRest] = brandLabel.trim().split(/\s+/);
   const brandAccent = brandRest.join(" ");
@@ -153,7 +162,6 @@ function SiteHeader({ brand, locationLabel, links }) {
           </nav>
 
           <div className="header-meta">
-            <span className="header-place">{locationLabel || "Giza, Egypt"}</span>
             <span className="header-time">{clock}</span>
           </div>
 
@@ -225,6 +233,18 @@ function SiteHeader({ brand, locationLabel, links }) {
               {linkedin && (
                 <a className="social" href={linkedin} {...linkAttrs(linkedin)} onClick={() => setOpen(false)}>
                   in
+                </a>
+              )}
+              {whatsapp && (
+                <a
+                  className="social social-wa"
+                  href={whatsapp}
+                  {...linkAttrs(whatsapp)}
+                  onClick={() => setOpen(false)}
+                  aria-label="WhatsApp"
+                  title="WhatsApp"
+                >
+                  <WhatsAppIcon />
                 </a>
               )}
               <a
@@ -328,7 +348,6 @@ export default function App() {
       <div className="bg-glow" aria-hidden="true" />
       <SiteHeader
         brand={profile?.brand}
-        locationLabel={profile?.location?.includes("Egypt") ? "Giza, Egypt" : profile?.location}
         links={profile?.links}
       />
       {error ? (

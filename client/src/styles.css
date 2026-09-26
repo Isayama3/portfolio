@@ -274,10 +274,6 @@ main,
   z-index: 2;
 }
 
-.header-place {
-  color: var(--muted);
-}
-
 .header-time {
   color: var(--ink);
   font-variant-numeric: tabular-nums;
@@ -1670,6 +1666,15 @@ main {
 .social:hover {
   border-color: var(--accent);
   color: var(--accent);
+}
+
+.social-wa:hover,
+.contact-ico-wa {
+  color: #25d366;
+}
+
+.social-wa:hover {
+  border-color: #25d366;
 }
 
 .contact-form {

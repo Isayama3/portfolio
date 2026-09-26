@@ -3,6 +3,14 @@ import { Link, useLocation } from "react-router-dom";
 import { getProjects, linkAttrs, realLink, sendContact } from "../api.js";
 import { useCountUp, useInView, useLightRail } from "../hooks.js";
 
+function WhatsAppIcon({ size = 14 }) {
+  return (
+    <svg viewBox="0 0 24 24" width={size} height={size} aria-hidden="true" fill="currentColor">
+      <path d="M12.04 2C6.58 2 2.15 6.4 2.15 11.84c0 1.99.58 3.84 1.6 5.42L2 22l4.9-1.7a9.86 9.86 0 0 0 5.14 1.42h.01c5.46 0 9.89-4.4 9.89-9.84C21.94 6.4 17.5 2 12.04 2Zm5.77 14.01c-.24.67-1.4 1.23-1.94 1.3-.5.07-1.13.1-1.82-.11-.42-.13-.96-.31-1.65-.61-2.9-1.26-4.79-4.18-4.93-4.37-.14-.19-1.17-1.56-1.17-2.97 0-1.41.74-2.1 1-2.39.26-.29.57-.36.76-.36h.55c.18 0 .41-.07.64.49.24.58.82 2 .89 2.14.07.15.12.32.02.51-.1.2-.15.32-.3.49-.14.17-.3.38-.43.51-.14.14-.29.29-.12.56.16.28.73 1.2 1.56 1.94 1.08.96 1.98 1.26 2.26 1.4.28.14.44.12.6-.07.17-.2.7-.81.89-1.09.19-.28.37-.23.63-.14.26.1 1.65.78 1.93.92.28.14.47.21.54.33.07.12.07.68-.17 1.35Z" />
+    </svg>
+  );
+}
+
 function LightRail({ className = "", children }) {
   const [ref, progress] = useLightRail();
   return (
@@ -208,6 +216,7 @@ export default function Home({ profile }) {
   const email = realLink(profile?.links?.email);
   const github = realLink(profile?.links?.github);
   const linkedin = realLink(profile?.links?.linkedin);
+  const whatsapp = realLink(profile?.links?.whatsapp);
 
   if (!profile) {
     return (
@@ -552,15 +561,17 @@ export default function Home({ profile }) {
                 </span>
               </a>
             )}
-            <div className="contact-line">
-              <span className="contact-ico" aria-hidden="true">
-                ⌖
-              </span>
-              <span>
-                <small>Location</small>
-                <strong>{profile.location}</strong>
-              </span>
-            </div>
+            {whatsapp && (
+              <a className="contact-line" href={whatsapp} {...linkAttrs(whatsapp)}>
+                <span className="contact-ico contact-ico-wa" aria-hidden="true">
+                  <WhatsAppIcon size={16} />
+                </span>
+                <span>
+                  <small>WhatsApp</small>
+                  <strong>Chat on WhatsApp</strong>
+                </span>
+              </a>
+            )}
             <p className="social-label">Connect socially</p>
             <div className="social-row">
               {github && (
@@ -571,6 +582,17 @@ export default function Home({ profile }) {
               {linkedin && (
                 <a className="social" href={linkedin} {...linkAttrs(linkedin)}>
                   in
+                </a>
+              )}
+              {whatsapp && (
+                <a
+                  className="social social-wa"
+                  href={whatsapp}
+                  {...linkAttrs(whatsapp)}
+                  aria-label="WhatsApp"
+                  title="WhatsApp"
+                >
+                  <WhatsAppIcon />
                 </a>
               )}
               {email && (
