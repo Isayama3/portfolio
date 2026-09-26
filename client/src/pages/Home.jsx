@@ -24,8 +24,13 @@ function TechIcon({ slug, name }) {
   // Express (and a few others) ship black marks — force light on dark tiles.
   const darkMarks = new Set(["express"]);
   const color = darkMarks.has(slug) ? "ffffff" : "";
+  const initials = name
+    .split(/[\s/]+/)
+    .map((w) => w[0])
+    .join("")
+    .slice(0, 2);
   if (failed || !slug) {
-    return <span className="tech-fallback">{name.slice(0, 2)}</span>;
+    return <span className="tech-fallback">{initials}</span>;
   }
   return (
     <img
@@ -391,13 +396,14 @@ export default function Home({ profile }) {
           </div>
           <ul className="tech-grid">
             {(profile.techStack || []).map((item) => (
-              <li key={item.name} className="tech-tile" tabIndex={0}>
-                <span className="tech-name">{item.name}</span>
+              <li key={item.name} className="tech-tile">
                 <TechIcon slug={item.icon} name={item.name} />
+                <span className="tech-name">{item.name}</span>
               </li>
             ))}
             <li className="tech-tile tech-tile-more" aria-hidden="true">
-              <span>and more</span>
+              <span className="tech-more-mark">+</span>
+              <span className="tech-name">and more</span>
             </li>
           </ul>
         </Reveal>

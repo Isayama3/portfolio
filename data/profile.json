@@ -54,6 +54,9 @@
     { "name": "Redis", "icon": "redis" },
     { "name": "MySQL", "icon": "mysql" },
     { "name": "MongoDB", "icon": "mongodb" },
+    { "name": "Meilisearch", "icon": "meilisearch" },
+    { "name": "Elasticsearch", "icon": "elasticsearch" },
+    { "name": "WebSockets", "icon": "" },
     { "name": "Docker", "icon": "docker" },
     { "name": "Git", "icon": "git" },
     { "name": "TypeScript", "icon": "typescript" }
