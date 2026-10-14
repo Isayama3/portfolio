@@ -26,6 +26,52 @@
     }
   },
   {
+    "slug": "eot",
+    "title": "EOT — Group Game Platform",
+    "year": "Jan 2024 – Apr 2026",
+    "category": "Backend",
+    "company": "Neotrick",
+    "image": "/projects/eot.png",
+    "summary": "Backend team work at Neotrick for EOT — Arabic group/party game sessions, teams, categories, and credits (iOS & Android).",
+    "description": "EOT (eot.com.sa) is a Saudi Arabic social/group game product (marketing site + App Store & Google Play). While at Neotrick I was part of the backend team building APIs for session lifecycle, teams, category packs, history, and session credits. Product and brand belong to EOT; this entry reflects my contribution on the Neotrick delivery team.",
+    "technical": "Contributed RESTful APIs for session creation/settings, team membership, game category catalogs, session history, and credit/balance flows for mobile clients. Auth, validation, and data models keep multi-player session state consistent across devices.",
+    "stack": [
+      "Laravel",
+      "APIs",
+      "Mobile",
+      "Sessions",
+      "PostgreSQL"
+    ],
+    "links": {
+      "live": "https://eot.com.sa/",
+      "play": "",
+      "repo": ""
+    }
+  },
+  {
+    "slug": "kkf-careers",
+    "title": "King Khalid Foundation — Careers",
+    "year": "Jan 2024 – Apr 2026",
+    "category": "Backend",
+    "company": "Neotrick",
+    "image": "/projects/kkf-careers.png",
+    "summary": "Backend team work at Neotrick for King Khalid Foundation careers portal — jobs, applications, and foundation web services.",
+    "description": "King Khalid Foundation careers (careers.kkf.org.sa) is the foundation’s hiring and careers surface within the broader KKF digital presence. At Neotrick I was part of the backend team supporting careers/job flows and related APIs for the foundation’s web products. Product and brand belong to King Khalid Foundation; this entry reflects my role on the Neotrick team.",
+    "technical": "Contributed server-side APIs and integrations for careers listings, applicant flows, and content-backed foundation pages consumed by the Arabic/English web clients. Focused on reliable CRUD, validation, and admin-facing data for hiring content.",
+    "stack": [
+      "Laravel",
+      "APIs",
+      "CMS",
+      "Careers",
+      "PostgreSQL"
+    ],
+    "links": {
+      "live": "https://careers.kkf.org.sa/",
+      "play": "",
+      "repo": ""
+    }
+  },
+  {
     "slug": "carspot",
     "title": "CarSpot",
     "year": "2023–2024",
@@ -35,7 +81,12 @@
     "summary": "Automotive marketplace backend at MMB — cars, trucks, plates, parts, rentals, and services on Google Play.",
     "description": "CarSpot is a mobile automotive marketplace on Google Play for buying/selling cars and trucks, premium numbers, license plates, spare parts, rentals, and car services. I contributed backend APIs for marketplace flows while at MMB Technology — product and brand belong to the client; this entry reflects my role on the team.",
     "technical": "Laravel RESTful APIs, schemas, and inventory-oriented modules powering the CarSpot mobile clients — listings, categories, and buyer/seller communication paths.",
-    "stack": ["Laravel", "APIs", "Marketplace", "Mobile"],
+    "stack": [
+      "Laravel",
+      "APIs",
+      "Marketplace",
+      "Mobile"
+    ],
     "links": {
       "live": "",
       "play": "https://play.google.com/store/apps/details?id=com.application.carspot&hl=en",
@@ -52,7 +103,13 @@
     "summary": "Roadside-assistance APIs at Taj — matching customers with towing, battery, tire, and service providers.",
     "description": "Biz Buradayız (“We Are Here”) is a roadside-assistance marketplace on Google Play that connects customers with towing, battery, tire, and related service providers. Backend work was delivered while at Taj — product and brand belong to Biz Buradayız; this entry reflects my API contribution, not sole ownership.",
     "technical": "Laravel APIs for service requests, provider matching, status updates, and mobile-oriented realtime/push hooks used by the customer app.",
-    "stack": ["Laravel", "APIs", "Push", "Realtime", "Mobile"],
+    "stack": [
+      "Laravel",
+      "APIs",
+      "Push",
+      "Realtime",
+      "Mobile"
+    ],
     "links": {
       "live": "",
       "play": "https://play.google.com/store/apps/details?id=com.namaait.bizburadayiz&hl=en",
@@ -69,7 +126,11 @@
     "summary": "Multi-tenant fixes and GIS land-analytics integration for Zr3i.com.",
     "description": "Zr3i is a land-analytics product. I contributed backend work around multi-tenant behavior and GIS-related integrations on Zr3i.com.",
     "technical": "Supported multi-tenant fixes and GIS land-analytics integration across tenancy boundaries on a Laravel backend.",
-    "stack": ["Laravel", "GIS", "Multi-tenancy"],
+    "stack": [
+      "Laravel",
+      "GIS",
+      "Multi-tenancy"
+    ],
     "links": {
       "live": "https://zr3i.com",
       "play": "",
@@ -86,7 +147,13 @@
     "summary": "Backend for Golden Host (web + mobile) while at Creative Minds — Saudi short-stay / property booking.",
     "description": "Golden Host is a Saudi short-stay platform for apartments, chalets, villas, and more (website + Google Play app). I contributed as a backend team member at Creative Minds — product and brand belong to the company; this entry reflects my role on the team, not sole ownership.",
     "technical": "Server-side features supporting booking / real-estate flows for web and mobile clients, plus related LMS chunked video upload work in the same engagement. Laravel APIs oriented for the product’s clients and operators.",
-    "stack": ["Laravel", "APIs", "LMS", "Chunked upload", "Mobile"],
+    "stack": [
+      "Laravel",
+      "APIs",
+      "LMS",
+      "Chunked upload",
+      "Mobile"
+    ],
     "links": {
       "live": "https://goldenhost.co/",
       "play": "https://play.google.com/store/apps/details?id=com.cemsit.golden_host&hl=en",
@@ -103,7 +170,13 @@
     "summary": "E-commerce backend for Cardnet (via 7lsoft, contract) — digital cards, electronics, and e-invoicing.",
     "description": "Cardnet is a shopping app on Google Play for digital cards and electronics. Backend work — multi-tenant refactor and e-invoicing / payment processing — was delivered on contract via 7lsoft. Product and brand belong to the merchant; this entry reflects my contribution as a contractor.",
     "technical": "Laravel multi-tenant commerce services for listings, checkout-related flows, compliant e-invoicing hooks, and mobile API contracts consumed by the Cardnet Android app.",
-    "stack": ["Laravel", "E-commerce", "E-invoicing", "APIs", "Mobile"],
+    "stack": [
+      "Laravel",
+      "E-commerce",
+      "E-invoicing",
+      "APIs",
+      "Mobile"
+    ],
     "links": {
       "live": "",
       "play": "https://play.google.com/store/apps/details?id=sa.hl.cardnet&hl=en",
@@ -120,7 +193,13 @@
     "summary": "Affiliate SaaS v2 and e-commerce apps (Kayan, Jiovaniaff v1, Egygomla) at Nullisues.",
     "description": "At Nullisues International I led backend work for Jiovaniaff SaaS v2 (affiliate) and e-commerce apps including Kayan, Jiovaniaff v1, and Egygomla.",
     "technical": "Multi-tenant Laravel (custom HMVC) with Redis caching/queues, Docker, and Laravel Octane. Optimized APIs for React/Flutter with raw SQL over Eloquent; State pattern for order workflows. Real-time features via Ratchet WebSockets on PostgreSQL.",
-    "stack": ["Laravel", "Octane", "Redis", "PostgreSQL", "WebSockets"],
+    "stack": [
+      "Laravel",
+      "Octane",
+      "Redis",
+      "PostgreSQL",
+      "WebSockets"
+    ],
     "links": {
       "live": "",
       "play": "",

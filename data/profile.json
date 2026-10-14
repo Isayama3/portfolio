@@ -5,19 +5,19 @@
   "role": "Software Engineer",
   "typedRoles": [
     "Software Engineer",
-    "Backend Specialist",
+    "Backend-Focused Engineer",
     "API & Systems Engineer",
     "Platform Engineer"
   ],
-  "tagline": "Software engineer specialized in backend — scalable APIs, queues, and systems built for real traffic.",
+  "tagline": "Software engineer with a backend focus — scalable APIs, queues, and systems built for real traffic.",
   "location": "Dokki, Giza, Egypt",
   "availability": "Available for Projects",
   "cv": "/cv.pdf",
   "photo": "/images/profile.jpg",
   "phone": "+20 10 6643 6323",
-  "intro": "Software engineer specialized in backend systems — APIs, data pipelines, integrations, and the infrastructure that keeps products fast and reliable.",
+  "intro": "Software engineer with a backend focus — APIs, data pipelines, integrations, and the infrastructure that keeps products fast and reliable.",
   "aiNote": "I use AI tools day-to-day to enhance delivery speed and code quality.",
-  "about": "Software Engineer with 5+ years focused on backend architecture and product delivery. I design and ship server-side systems for travel, SaaS, marketplace, and mobile products — from APIs through production.",
+  "about": "Software Engineer with 5+ years and a strong backend focus — architecture, APIs, and product delivery. I design and ship server-side systems for travel, SaaS, marketplace, and mobile products — from APIs through production.",
   "aboutPillars": [
     {
       "title": "The Vision",
@@ -92,7 +92,7 @@
     {
       "org": "Hojuzat — OTA Travel Platform",
       "meta": "Full-time / Hybrid · Dokki, Egypt · Hojuzat.com",
-      "title": "Senior Backend Engineer",
+      "title": "Software Engineer",
       "years": "Dec 2024 – Present",
       "note": "OTA travel platform — search, rates, content, booking flows, and third-party hotel integrations.",
       "bullets": [
@@ -103,6 +103,20 @@
         "Shipped API V1 → V2 with parallel services and OpenAPI; tuned Horizon/Docker for lower peak CPU/memory and faster deploys."
       ],
       "tags": ["Laravel", "Horizon", "Redis", "Meilisearch", "Docker", "Hotel APIs"],
+      "kind": "work"
+    },
+    {
+      "org": "Neotrick",
+      "meta": "Team delivery · Client products",
+      "title": "Backend Software Engineer",
+      "years": "Jan 2024 – Apr 2026",
+      "note": "Part of the Neotrick backend team on EOT (group game) and King Khalid Foundation careers.",
+      "bullets": [
+        "EOT (eot.com.sa): backend APIs for game sessions, teams, categories, history, and session credits for iOS/Android clients.",
+        "King Khalid Foundation Careers (careers.kkf.org.sa): backend support for careers/job flows and foundation web services.",
+        "Delivered as part of the Neotrick team — product ownership remained with the clients."
+      ],
+      "tags": ["Laravel", "APIs", "EOT", "KKF", "Mobile"],
       "kind": "work"
     },
     {
